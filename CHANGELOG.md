@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.1](https://github.com/Get-Coral/template/compare/v1.0.0...v1.0.1) (2026-04-13)
+
+
+### Bug Fixes
+
+* add error pages ([52453a5](https://github.com/Get-Coral/template/commit/52453a56d197fb81c5efe313ad1613ec40587b01))
+* make error state valid HTML ([4881a02](https://github.com/Get-Coral/template/commit/4881a02ed3978422b8858d86b77fe5c0a41a9b59))
+
 ## 1.0.0 (2026-04-13)
 
 

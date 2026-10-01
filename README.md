@@ -84,7 +84,11 @@ docker run -p 3000:3000 \
   coral-module
 ```
 
-Published automatically to `ghcr.io/get-coral/<module-name>` on every release via GitHub Actions.
+Published automatically on every release via GitHub Actions, to the name set as
+`IMAGE_NAME` in `.github/workflows/docker-publish.yml`:
+
+- `getcoral/<module-name>` on Docker Hub
+- `ghcr.io/get-coral/<module-name>` on GHCR
 
 ---
 

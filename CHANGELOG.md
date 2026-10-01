@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.2](https://github.com/Get-Coral/template/compare/v1.0.1...v1.0.2) (2026-10-01)
+
+
+### Bug Fixes
+
+* copy pnpm-workspace.yaml into Docker install stages ([adc97c2](https://github.com/Get-Coral/template/commit/adc97c22c2bd53f84b6d3b5045ca3d4cb4d26316))
+* drop the Docker Hub categories payload, which the API ignores ([#29](https://github.com/Get-Coral/template/issues/29)) ([b75ba2d](https://github.com/Get-Coral/template/commit/b75ba2dff6fe6bf70fa790f43a3a69352f4544be))
+* pin pnpm explicitly so release-please cannot break the build ([1a27df3](https://github.com/Get-Coral/template/commit/1a27df343cc84ad8b9d0d2f995e6b92bf5673246))
+* pin pnpm explicitly so release-please cannot break the build ([f2aa0d4](https://github.com/Get-Coral/template/commit/f2aa0d484cf3628465a85c4cf213dc5fb53a08ae))
+
 ## [1.0.1](https://github.com/Get-Coral/template/compare/v1.0.0...v1.0.1) (2026-04-13)
 
 

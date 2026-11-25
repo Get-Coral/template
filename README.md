@@ -50,9 +50,8 @@ App runs at `http://localhost:3000`.
 | [TanStack Router](https://tanstack.com/router) | Type-safe file-based routing |
 | [TanStack Query](https://tanstack.com/query) | Server state management |
 | [Tailwind v4](https://tailwindcss.com) | Styling |
-| [Biome](https://biomejs.dev) | Linting & formatting |
+| [Vite+](https://viteplus.dev) | One toolchain: Vite, Vitest, Oxlint, Oxfmt |
 | [@get-coral/jellyfin](https://github.com/Get-Coral/jellyfin) | Jellyfin API client |
-| [Vitest](https://vitest.dev) | Testing |
 
 ---
 
@@ -63,9 +62,10 @@ pnpm dev        # Start dev server on :3000
 pnpm build      # Production build
 pnpm start      # Run production server
 pnpm typecheck  # TypeScript check
-pnpm check      # Biome lint + format check
-pnpm lint       # Biome lint with auto-fix
-pnpm test       # Run tests
+pnpm check      # Format, lint and type-aware lint (vp check)
+pnpm lint       # Lint with auto-fix (Oxlint)
+pnpm format     # Format (Oxfmt)
+pnpm test       # Run tests (Vitest, via vp test)
 ```
 
 ---

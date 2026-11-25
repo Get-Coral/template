@@ -1,52 +1,52 @@
 {
-  "name": "coral-module",
-  "packageManager": "pnpm@10.32.1",
-  "private": true,
-  "type": "module",
-  "version": "1.0.1",
-  "imports": {
-    "#/*": "./src/*"
-  },
-  "scripts": {
-    "dev": "vite dev --port 3000",
-    "build": "vite build",
-    "start": "node server.mjs",
-    "preview": "vite preview",
-    "test": "vitest run --passWithNoTests",
-    "typecheck": "tsc --noEmit",
-    "check": "biome check .",
-    "lint": "biome lint . --write",
-    "format": "biome format . --write"
-  },
-  "dependencies": {
-    "@get-coral/jellyfin": "^1.11.0",
-    "@get-coral/ui": "^1.0.2",
-    "@tailwindcss/vite": "^4.2.2",
-    "@tanstack/react-query": "^5.96.2",
-    "@tanstack/react-query-devtools": "^5.96.2",
-    "@tanstack/react-router": "^1.170.17",
-    "@tanstack/react-router-devtools": "^1.167.0",
-    "@tanstack/react-router-ssr-query": "^1.167.1",
-    "@tanstack/react-start": "^1.168.27",
-    "lucide-react": "^0.577.0",
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8",
-    "tailwindcss": "^4.2.2"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^2.4.11",
-    "@get-coral/biome-config": "^0.2.0",
-    "@get-coral/tsconfig": "^0.2.0",
-    "@tanstack/devtools-vite": "^0.8.1",
-    "@testing-library/dom": "^10.4.1",
-    "@testing-library/react": "^16.3.2",
-    "@types/react": "^19.2.18",
-    "@types/react-dom": "^19.2.4",
-    "@vitejs/plugin-react": "^5.2.0",
-    "jsdom": "^28.1.0",
-    "typescript": "^5.9.3",
-    "vite": "^7.3.1",
-    "vite-tsconfig-paths": "^5.1.4",
-    "vitest": "^3.2.4"
-  }
+	"name": "coral-module",
+	"version": "1.0.1",
+	"private": true,
+	"type": "module",
+	"imports": {
+		"#/*": "./src/*"
+	},
+	"scripts": {
+		"dev": "vp dev --port 3000",
+		"build": "vp build",
+		"start": "node server.mjs",
+		"preview": "vp preview",
+		"test": "vp test run --passWithNoTests",
+		"typecheck": "tsc --noEmit",
+		"check": "vp check",
+		"lint": "vp lint --fix",
+		"format": "vp fmt"
+	},
+	"dependencies": {
+		"@get-coral/jellyfin": "^1.11.0",
+		"@get-coral/ui": "^1.0.2",
+		"@tailwindcss/vite": "^4.3.5",
+		"@tanstack/react-query": "^5.108.4",
+		"@tanstack/react-query-devtools": "^5.108.4",
+		"@tanstack/react-router": "^1.170.46",
+		"@tanstack/react-router-devtools": "^1.167.4",
+		"@tanstack/react-router-ssr-query": "^1.167.3",
+		"@tanstack/react-start": "^1.169.7",
+		"lucide-react": "^0.577.0",
+		"react": "^19.3.1",
+		"react-dom": "^19.3.1",
+		"tailwindcss": "^4.3.5"
+	},
+	"devDependencies": {
+		"@get-coral/oxfmt-config": "^0.1.0",
+		"@get-coral/oxlint-config": "^0.1.0",
+		"@get-coral/tsconfig": "^0.2.0",
+		"@tanstack/devtools-vite": "^0.8.7",
+		"@testing-library/dom": "^10.4.1",
+		"@testing-library/react": "^16.3.2",
+		"@types/node": "^24.19.4",
+		"@types/react": "^19.3.3",
+		"@types/react-dom": "^19.3.0",
+		"@vitejs/plugin-react": "^5.2.0",
+		"jsdom": "^28.1.0",
+		"typescript": "^5.9.3",
+		"vite": "catalog:",
+		"vite-plus": "catalog:"
+	},
+	"packageManager": "pnpm@10.32.1"
 }

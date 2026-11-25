@@ -1,5 +1,12 @@
 import { CoralErrorState } from "@get-coral/ui";
-import { createRootRoute, HeadContent, Outlet, Scripts, useRouter } from "@tanstack/react-router";
+import {
+	createRootRoute,
+	type ErrorComponentProps,
+	HeadContent,
+	Outlet,
+	Scripts,
+	useRouter,
+} from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import "@get-coral/ui/styles.css";
 import "#/styles.css";
@@ -39,7 +46,7 @@ function RootDocument({ children }: { children: ReactNode }) {
 	);
 }
 
-function RootErrorPage({ error, reset }: { error: Error; reset: () => void }) {
+function RootErrorPage({ error, reset }: ErrorComponentProps) {
 	const router = useRouter();
 
 	function handleRetry() {
@@ -51,7 +58,11 @@ function RootErrorPage({ error, reset }: { error: Error; reset: () => void }) {
 		<CoralErrorState
 			eyebrow="Coral"
 			title="Something went wrong"
-			description={error?.message ?? "An unexpected error happened while loading this route."}
+			description={
+				error instanceof Error
+					? error.message
+					: "An unexpected error happened while loading this route."
+			}
 			primaryAction={{ label: "Try again", onClick: handleRetry }}
 			secondaryAction={{ label: "Back home", href: "/", variant: "neutral" }}
 		/>

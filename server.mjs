@@ -87,9 +87,11 @@ const nodeServer = http.createServer(async (req, res) => {
     const headers = new Headers();
     for (const [k, v] of Object.entries(req.headers)) {
       if (v == null) continue;
-      Array.isArray(v)
-        ? v.forEach((val) => headers.append(k, val))
-        : headers.set(k, v);
+      if (Array.isArray(v)) {
+        for (const val of v) headers.append(k, val);
+      } else {
+        headers.set(k, v);
+      }
     }
 
     const webReq = new Request(url, {

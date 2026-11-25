@@ -5,12 +5,12 @@ import { describe, expect, it } from "vite-plus/test";
 // (jsdom environment, component rendering) so new modules start with a working
 // `pnpm test` instead of an empty one.
 function Greeting({ name }: { name: string }) {
-  return <p>Hello {name}</p>;
+	return <p>Hello {name}</p>;
 }
 
 describe("example", () => {
-  it("renders a component", () => {
-    render(<Greeting name="Coral" />);
-    expect(screen.getByText("Hello Coral")).toBeTruthy();
-  });
+	it("renders a component", () => {
+		render(<Greeting name="Coral" />);
+		expect(screen.getByText("Hello Coral")).toBeTruthy();
+	});
 });

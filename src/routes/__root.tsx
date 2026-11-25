@@ -8,6 +8,7 @@ import {
 	useRouter,
 } from "@tanstack/react-router";
 import type { ReactNode } from "react";
+
 import "@get-coral/ui/styles.css";
 import "#/styles.css";
 

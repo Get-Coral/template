@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it } from "vite-plus/test";
 
 // Example test — safe to delete. It shows the vitest + Testing Library setup
 // (jsdom environment, component rendering) so new modules start with a working

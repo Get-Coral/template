@@ -44,15 +44,14 @@ App runs at `http://localhost:3000`.
 
 ## Stack
 
-| Tool | Purpose |
-|------|---------|
-| [TanStack Start](https://tanstack.com/start) | Full-stack React framework |
-| [TanStack Router](https://tanstack.com/router) | Type-safe file-based routing |
-| [TanStack Query](https://tanstack.com/query) | Server state management |
-| [Tailwind v4](https://tailwindcss.com) | Styling |
-| [Biome](https://biomejs.dev) | Linting & formatting |
-| [@get-coral/jellyfin](https://github.com/Get-Coral/jellyfin) | Jellyfin API client |
-| [Vitest](https://vitest.dev) | Testing |
+| Tool                                                         | Purpose                                    |
+| ------------------------------------------------------------ | ------------------------------------------ |
+| [TanStack Start](https://tanstack.com/start)                 | Full-stack React framework                 |
+| [TanStack Router](https://tanstack.com/router)               | Type-safe file-based routing               |
+| [TanStack Query](https://tanstack.com/query)                 | Server state management                    |
+| [Tailwind v4](https://tailwindcss.com)                       | Styling                                    |
+| [Vite+](https://viteplus.dev)                                | One toolchain: Vite, Vitest, Oxlint, Oxfmt |
+| [@get-coral/jellyfin](https://github.com/Get-Coral/jellyfin) | Jellyfin API client                        |
 
 ---
 
@@ -63,9 +62,10 @@ pnpm dev        # Start dev server on :3000
 pnpm build      # Production build
 pnpm start      # Run production server
 pnpm typecheck  # TypeScript check
-pnpm check      # Biome lint + format check
-pnpm lint       # Biome lint with auto-fix
-pnpm test       # Run tests
+pnpm check      # Format, lint and type-aware lint (vp check)
+pnpm lint       # Lint with auto-fix (Oxlint)
+pnpm format     # Format (Oxfmt)
+pnpm test       # Run tests (Vitest, via vp test)
 ```
 
 ---
@@ -94,20 +94,20 @@ Published automatically on every release via GitHub Actions, to the name set as
 
 ## CI / CD
 
-| Workflow | Trigger | What it does |
-|----------|---------|-------------|
-| `ci.yml` | Every PR + push to main | Typecheck, lint, test, build, Docker build check |
-| `docker-publish.yml` | Push to main + version tags | Publishes to GHCR |
-| `release-please.yml` | Push to main | Opens release PR, publishes Docker on merge |
+| Workflow             | Trigger                     | What it does                                     |
+| -------------------- | --------------------------- | ------------------------------------------------ |
+| `ci.yml`             | Every PR + push to main     | Typecheck, lint, test, build, Docker build check |
+| `docker-publish.yml` | Push to main + version tags | Publishes to GHCR                                |
+| `release-please.yml` | Push to main                | Opens release PR, publishes Docker on merge      |
 
 Releases are fully automated via [Release Please](https://github.com/googleapis/release-please). Use conventional commits:
 
-| Commit prefix | Version bump |
-|--------------|-------------|
-| `feat:` | Minor |
-| `fix:` | Patch |
-| `feat!:` / `fix!:` | Major |
-| `chore:`, `docs:` | No bump |
+| Commit prefix      | Version bump |
+| ------------------ | ------------ |
+| `feat:`            | Minor        |
+| `fix:`             | Patch        |
+| `feat!:` / `fix!:` | Major        |
+| `chore:`, `docs:`  | No bump      |
 
 ---
 
